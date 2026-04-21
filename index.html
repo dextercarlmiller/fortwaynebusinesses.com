@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fort Wayne Web Studio builds affordable, professional websites for small businesses, startups, and nonprofits in Fort Wayne, Indiana. Get online in 2 weeks.">
+  <meta name="keywords" content="web design Fort Wayne, affordable websites Fort Wayne Indiana, small business website Fort Wayne">
+  <meta name="author" content="Dexter Miller — Fort Wayne Web Studio">
+  <link rel="canonical" href="https://fortwaynebusinesses.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fort Wayne Web Studio — Affordable Websites for Small Businesses">
+  <meta property="og:description" content="Fort Wayne Web Studio builds affordable, professional websites for small businesses, startups, and nonprofits in Fort Wayne, Indiana. Get online in 2 weeks.">
+  <meta property="og:url" content="https://fortwaynebusinesses.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fort Wayne Web Studio">
+
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Fort Wayne Web Studio",
+    "description": "Affordable web design and development for small businesses in Fort Wayne, Indiana.",
+    "url": "https://fortwaynebusinesses.com",
+    "founder": { "@type": "Person", "name": "Dexter Miller" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Fort Wayne", "addressRegion": "IN", "addressCountry": "US" },
+    "areaServed": "Fort Wayne, Indiana",
+    "priceRange": "$"
+  }
+  </script>
+
+  <!-- Google Analytics — replace G-XXXXXXXXXX with your actual measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/home.css">
+
+  <title>Fort Wayne Web Studio — Affordable Websites for Small Businesses</title>
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div id="cursor-dot" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+
+<!-- Nav overlay -->
+<div class="nav-overlay" aria-hidden="true"></div>
+
+<!-- ── Navigation ── -->
+<header>
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Fort Wayne Web Studio home">
+        <span class="nav-logo-accent" aria-hidden="true"></span>
+        <span class="nav-logo-text">Fort Wayne Web Studio</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary" style="font-size:0.875rem; padding: 10px 20px;">Get a quote</a>
+        <button class="dark-toggle" aria-label="Toggle dark mode">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <nav id="nav-drawer" class="nav-drawer" aria-label="Mobile navigation">
+    <a href="index.html" class="nav-logo" aria-label="Fort Wayne Web Studio home">
+      <span class="nav-logo-accent" aria-hidden="true"></span>
+      <span class="nav-logo-text">Fort Wayne Web Studio</span>
+    </a>
+    <ul class="nav-drawer-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#portfolio">Portfolio</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-drawer-cta">
+      <a href="contact.html" class="btn btn-primary">Get a free quote</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ── Hero ── -->
+  <section class="hero" aria-label="Hero">
+    <!-- Floating background shapes -->
+    <div class="bg-shapes" aria-hidden="true">
+      <div class="bg-shape bg-shape-circle" style="width:300px;height:300px;top:10%;right:8%;"></div>
+      <div class="bg-shape bg-shape-square" style="width:160px;height:160px;top:60%;right:20%;transform:rotate(15deg);"></div>
+      <div class="bg-shape bg-shape-ring" style="width:200px;height:200px;bottom:15%;left:5%;"></div>
+      <div class="bg-shape bg-shape-circle" style="width:80px;height:80px;top:30%;left:2%;"></div>
+      <div class="bg-shape bg-shape-square" style="width:100px;height:100px;bottom:30%;right:5%;transform:rotate(-20deg);"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+          Fort Wayne, Indiana
+        </div>
+        <h1>Affordable websites that <span class="highlight">work</span> for your business.</h1>
+        <p class="hero-sub">Fort Wayne Web Studio builds fast, beautiful websites for small businesses, startups, and nonprofits — at a price that actually makes sense.</p>
+        <div class="hero-cta">
+          <a href="contact.html" class="btn btn-primary btn-lg">Start a project</a>
+          <a href="#portfolio" class="btn btn-ghost btn-lg">See our work</a>
+        </div>
+        <div class="hero-trust">
+          <div class="hero-trust-avatars" aria-hidden="true">
+            <div class="hero-trust-avatar">S</div>
+            <div class="hero-trust-avatar">M</div>
+            <div class="hero-trust-avatar">J</div>
+          </div>
+          <span>Trusted by local Fort Wayne businesses</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Marquee strip ── -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Web Design</span><span class="dot">·</span>
+      <span>Web Development</span><span class="dot">·</span>
+      <span>SEO</span><span class="dot">·</span>
+      <span>Fort Wayne</span><span class="dot">·</span>
+      <span>Small Business</span><span class="dot">·</span>
+      <span>Nonprofits</span><span class="dot">·</span>
+      <span>Startups</span><span class="dot">·</span>
+      <span>Cloudflare Pages</span><span class="dot">·</span>
+      <span>Mobile-First Design</span><span class="dot">·</span>
+      <span>Fast Load Times</span><span class="dot">·</span>
+      <!-- Duplicate for seamless loop -->
+      <span>Web Design</span><span class="dot">·</span>
+      <span>Web Development</span><span class="dot">·</span>
+      <span>SEO</span><span class="dot">·</span>
+      <span>Fort Wayne</span><span class="dot">·</span>
+      <span>Small Business</span><span class="dot">·</span>
+      <span>Nonprofits</span><span class="dot">·</span>
+      <span>Startups</span><span class="dot">·</span>
+      <span>Cloudflare Pages</span><span class="dot">·</span>
+      <span>Mobile-First Design</span><span class="dot">·</span>
+      <span>Fast Load Times</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <!-- ── Stats / Trust bar ── -->
+  <section class="stats-section" aria-label="Key metrics">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-number">
+            <span class="count-up" data-target="100" data-suffix="%">100%</span>
+          </div>
+          <div class="stat-label">Satisfaction guarantee</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-number">
+            <span class="count-up" data-prefix="$" data-target="0">$0</span>
+          </div>
+          <div class="stat-label">Setup fees</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-number" style="font-size:1.8rem;">2 wks</div>
+          <div class="stat-label">Average delivery</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-number" style="font-size:1.6rem; line-height:1.2;">Fort<br>Wayne</div>
+          <div class="stat-label">Locally based</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Services ── -->
+  <section class="section" id="services" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">What we do</span>
+        <h2 id="services-heading">Everything your business needs online</h2>
+        <p>From a first website to a full digital presence — we handle it all so you can focus on running your business.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3>Web Design &amp; Development</h3>
+          <p>Custom-built websites that look great on every device and load fast. No templates, no page builders — clean code built to last. Starting from affordable monthly plans.</p>
+          <a href="contact.html" class="service-link">Start a project →</a>
+        </article>
+
+        <article class="service-card reveal reveal-delay-1">
+          <div class="service-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <h3>Search Engine Optimization</h3>
+          <p>Help your business show up on Google when local customers search for what you offer. We build SEO into every site from day one — no add-ons needed.</p>
+          <a href="faq.html#seo" class="service-link">Learn more →</a>
+        </article>
+
+        <article class="service-card reveal reveal-delay-2">
+          <div class="service-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Ongoing Maintenance</h3>
+          <p>Hosting, updates, and support so your site stays fast, secure, and up-to-date. We handle the tech so you never have to think about it.</p>
+          <a href="faq.html" class="service-link">Learn more →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How it works ── -->
+  <section class="section steps-section" aria-labelledby="steps-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Our process</span>
+        <h2 id="steps-heading">From idea to live site in 3 steps</h2>
+        <p>No complicated process, no tech jargon. Just a clear path to getting your business online.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-item reveal">
+          <div class="step-circle" aria-hidden="true">1</div>
+          <h3>Tell us about your business</h3>
+          <p>Fill out our simple inquiry form. Tell us what you do, who you serve, and what you need. Takes about 5 minutes.</p>
+        </div>
+
+        <div class="step-item reveal reveal-delay-1">
+          <div class="step-circle" aria-hidden="true">2</div>
+          <h3>We design &amp; build</h3>
+          <p>We handle everything — design, development, content, and launch. You review and approve. No tech knowledge needed from you.</p>
+        </div>
+
+        <div class="step-item reveal reveal-delay-2">
+          <div class="step-circle" aria-hidden="true">3</div>
+          <h3>You grow</h3>
+          <p>Your site goes live, fast, and optimized. Customers find you on Google. You own everything — code, domain, content.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Portfolio ── -->
+  <!--
+    PORTFOLIO: Replace placeholder cards with real projects.
+    To add a project: copy one <article class="project-card"> block and update:
+    - data-category attribute (for filtering)
+    - image src (replace the .project-placeholder div with an <img> tag)
+    - business name, industry badge, description, and live URL
+  -->
+  <section class="section portfolio-section" id="portfolio" aria-labelledby="portfolio-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Our work</span>
+        <h2 id="portfolio-heading">Sites we've built for Fort Wayne businesses</h2>
+        <p>Every project is custom-built — no templates. Here's a sample of what we create.</p>
+      </div>
+
+      <!-- Filter bar -->
+      <div class="filter-bar" role="group" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="small-business">Small Business</button>
+        <button class="filter-btn" data-filter="nonprofit">Nonprofit</button>
+        <button class="filter-btn" data-filter="startup">Startup</button>
+      </div>
+
+      <!-- Portfolio grid -->
+      <div class="portfolio-grid">
+
+        <article class="project-card reveal" data-category="small-business">
+          <div class="project-image">
+            <div class="project-placeholder color-1" aria-label="Riverfront Coffee Co. website screenshot">Riverfront Coffee Co.</div>
+            <div class="project-overlay" aria-hidden="true">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-white" tabindex="-1">View site →</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="badge">Restaurant</span>
+            </div>
+            <h3>Riverfront Coffee Co.</h3>
+            <p>Cozy coffee shop on the St. Marys River. Menu, hours, and online ordering integration.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">View site →</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal reveal-delay-1" data-category="nonprofit">
+          <div class="project-image">
+            <div class="project-placeholder color-2" aria-label="Three Rivers Animal Rescue website screenshot">Three Rivers Animal Rescue</div>
+            <div class="project-overlay" aria-hidden="true">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-white" tabindex="-1">View site →</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="badge">Nonprofit</span>
+            </div>
+            <h3>Three Rivers Animal Rescue</h3>
+            <p>Local animal shelter with adoptable pet listings, volunteer signup, and donation integration.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">View site →</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal reveal-delay-2" data-category="startup">
+          <div class="project-image">
+            <div class="project-placeholder color-3" aria-label="Summit Fitness FW website screenshot">Summit Fitness FW</div>
+            <div class="project-overlay" aria-hidden="true">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-white" tabindex="-1">View site →</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="badge">Startup</span>
+            </div>
+            <h3>Summit Fitness FW</h3>
+            <p>Boutique gym launching in downtown Fort Wayne. Class schedule, membership tiers, and trainer bios.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">View site →</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="small-business">
+          <div class="project-image">
+            <div class="project-placeholder color-4" aria-label="Parkview Dental Arts website screenshot">Parkview Dental Arts</div>
+            <div class="project-overlay" aria-hidden="true">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-white" tabindex="-1">View site →</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="badge">Health &amp; Wellness</span>
+            </div>
+            <h3>Parkview Dental Arts</h3>
+            <p>Family dental practice with service pages, new patient forms, and appointment request functionality.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">View site →</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal reveal-delay-1" data-category="small-business">
+          <div class="project-image">
+            <div class="project-placeholder color-5" aria-label="Steel City Brewing website screenshot">Steel City Brewing</div>
+            <div class="project-overlay" aria-hidden="true">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-white" tabindex="-1">View site →</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="badge">Restaurant</span>
+            </div>
+            <h3>Steel City Brewing</h3>
+            <p>Craft brewery showcasing tap room hours, rotating beer menu, and private event bookings.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">View site →</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal reveal-delay-2" data-category="small-business">
+          <div class="project-image">
+            <div class="project-placeholder color-6" aria-label="Hoosier Home Repairs website screenshot">Hoosier Home Repairs</div>
+            <div class="project-overlay" aria-hidden="true">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-white" tabindex="-1">View site →</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="badge">Home Services</span>
+            </div>
+            <h3>Hoosier Home Repairs</h3>
+            <p>Licensed contractor in Fort Wayne. Service list, before/after gallery, and quote request form.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-link">View site →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Why us / Differentiator ── -->
+  <section class="section why-section" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-content">
+          <span class="section-label reveal">Why us</span>
+          <h2 id="why-heading" class="reveal">Why Fort Wayne businesses choose us</h2>
+          <div class="why-list">
+            <div class="why-item reveal">
+              <div class="why-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div class="why-item-text">
+                <h4>Lower cost than traditional agencies</h4>
+                <p>No bloated overhead, no account managers, no surprise invoices. You get agency-quality work at a fraction of the price.</p>
+              </div>
+            </div>
+            <div class="why-item reveal reveal-delay-1">
+              <div class="why-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <div class="why-item-text">
+                <h4>Deployed on Cloudflare — blazing fast</h4>
+                <p>Cloudflare's global network means faster load times, rock-solid uptime, and lower hosting costs — passed directly to you.</p>
+              </div>
+            </div>
+            <div class="why-item reveal reveal-delay-2">
+              <div class="why-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <div class="why-item-text">
+                <h4>You own everything</h4>
+                <p>Your code, your domain, your content. No vendor lock-in. If you ever leave, you take everything with you — no strings attached.</p>
+              </div>
+            </div>
+            <div class="why-item reveal reveal-delay-3">
+              <div class="why-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="why-item-text">
+                <h4>Built by a local Fort Wayne developer</h4>
+                <p>We understand this community. When you work with us, you're talking directly to the person building your site — not a sales rep.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="comparison-card reveal">
+          <table class="comparison-table" aria-label="Comparison: Fort Wayne Web Studio vs. typical agency">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col" class="col-us">Fort Wayne Web Studio</th>
+                <th scope="col">Typical Agency</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Setup cost</td>
+                <td class="col-us">Low</td>
+                <td>High</td>
+              </tr>
+              <tr>
+                <td>Monthly cost</td>
+                <td class="col-us">Affordable</td>
+                <td>Expensive</td>
+              </tr>
+              <tr>
+                <td>Delivery time</td>
+                <td class="col-us">~2 weeks</td>
+                <td>6–12 weeks</td>
+              </tr>
+              <tr>
+                <td>You own the code</td>
+                <td class="col-us">Yes ✓</td>
+                <td>Often no</td>
+              </tr>
+              <tr>
+                <td>Local Fort Wayne team</td>
+                <td class="col-us">Yes ✓</td>
+                <td>Rarely</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Testimonials ── -->
+  <!--
+    TESTIMONIALS: Replace placeholder cards with real client testimonials.
+    To add: copy one <article class="testimonial-card"> and update text, name, role, and avatar initial.
+  -->
+  <section class="section testimonials-section" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Testimonials</span>
+        <h2 id="testimonials-heading">What clients are saying</h2>
+        <p>Real feedback from real Fort Wayne businesses.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <article class="testimonial-card reveal">
+          <div class="testimonial-quote" aria-hidden="true">"</div>
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"We had zero web presence before. Dexter had our site live in under two weeks and it looked better than anything we could have imagined for the price. Customers keep telling us they found us on Google now."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">S</div>
+            <div>
+              <div class="testimonial-name">Sarah M.</div>
+              <div class="testimonial-role">Owner — Riverfront Coffee Co.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-quote" aria-hidden="true">"</div>
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"As a nonprofit with a very limited budget, we thought a professional website was out of reach. Fort Wayne Web Studio proved us completely wrong. Our donation page alone has paid for the site multiple times over."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">T</div>
+            <div>
+              <div class="testimonial-name">Tanya R.</div>
+              <div class="testimonial-role">Director — Three Rivers Animal Rescue</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card reveal reveal-delay-2">
+          <div class="testimonial-quote" aria-hidden="true">"</div>
+          <div class="testimonial-stars" aria-label="5 out of 5 stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"We needed to launch fast for our opening. Dexter delivered the entire site in 10 days, communicated clearly throughout, and it's exactly what we envisioned. The site is lightning fast on mobile too."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" aria-hidden="true">M</div>
+            <div>
+              <div class="testimonial-name">Marcus J.</div>
+              <div class="testimonial-role">Founder — Summit Fitness FW</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Final CTA ── -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <h2 id="cta-heading">Ready to get your business online?</h2>
+      <p>Most sites launch in 2 weeks. No tech knowledge needed.</p>
+      <a href="contact.html" class="btn btn-white btn-lg">Get a free quote</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Fort Wayne Web Studio home">
+          <span class="nav-logo-accent" aria-hidden="true"></span>
+          <span class="nav-logo-text">Fort Wayne Web Studio</span>
+        </a>
+        <p class="footer-tagline">Affordable, professional websites for small businesses in Fort Wayne, Indiana.</p>
+        <p class="footer-copy">© 2025 Fort Wayne Web Studio. All rights reserved.</p>
+      </div>
+
+      <nav aria-label="Footer navigation">
+        <p class="footer-col-title">Navigation</p>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <p class="footer-col-title">Get in touch</p>
+        <div class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0;margin-top:3px;color:var(--color-primary)"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span><a href="mailto:dexter@fortwaynebusinesses.com">dexter@fortwaynebusinesses.com</a></span>
+        </div>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn profile" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" aria-label="GitHub profile" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-bottom-text">Built with ♥ in Fort Wayne, IN · Deployed on Cloudflare Pages</p>
+      <div class="footer-bottom-links">
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/animations.js"></script>
+</body>
+</html>
