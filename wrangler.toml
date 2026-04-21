@@ -1,0 +1,6 @@
+name = "fortwaynebusinesses"
+compatibility_date = "2025-04-21"
+
+[assets]
+directory = "."
+not_found_handling = "single-page-application"
