@@ -1,0 +1,197 @@
+/* ============================================================
+   FORT WAYNE WEB STUDIO — faq.css
+   ============================================================ */
+
+/* ── FAQ section ── */
+.faq-section {
+  background-color: var(--color-bg);
+  padding: var(--space-10) 0;
+}
+
+.faq-container {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.faq-intro {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.faq-intro h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-bottom: var(--space-2);
+}
+
+.faq-intro p {
+  font-size: var(--text-md);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ── Accordion ── */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.faq-item {
+  background-color: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.faq-item.open {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(232, 101, 26, 0.08);
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: 64px;
+  transition: background-color var(--transition-fast);
+}
+
+.faq-question:hover {
+  background-color: rgba(232, 101, 26, 0.04);
+}
+
+.faq-item.open .faq-question {
+  background-color: rgba(232, 101, 26, 0.04);
+}
+
+.faq-question-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-text);
+  line-height: 1.4;
+  flex: 1;
+}
+
+.faq-toggle {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background: rgba(232, 101, 26, 0.1);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-primary);
+  transition: transform var(--transition-base), background-color var(--transition-fast);
+}
+
+.faq-toggle svg {
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
+.faq-item.open .faq-toggle {
+  transform: rotate(45deg);
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.faq-answer {
+  padding: 0 var(--space-4);
+}
+
+.faq-answer-inner {
+  padding-bottom: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-3);
+}
+
+.faq-answer p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-answer ul {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-2) 0;
+}
+
+.faq-answer ul li {
+  position: relative;
+  padding-left: var(--space-3);
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+  line-height: 1.7;
+}
+
+.faq-answer ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.faq-answer a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.faq-answer a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* ── Still have questions CTA ── */
+.faq-cta {
+  margin-top: var(--space-8);
+  text-align: center;
+  padding: var(--space-6);
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.faq-cta h3 {
+  font-size: 1.4rem;
+  margin-bottom: var(--space-2);
+}
+
+.faq-cta p {
+  font-size: 0.95rem;
+  margin-bottom: var(--space-4);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .faq-question {
+    padding: var(--space-3);
+  }
+
+  .faq-answer {
+    padding: 0 var(--space-3);
+  }
+}
