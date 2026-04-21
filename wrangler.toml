@@ -1,9 +1,6 @@
 name = "fortwaynebusinesses"
 compatibility_date = "2025-04-21"
 
-[build]
-command = "mkdir -p public && cp -r index.html about.html contact.html faq.html css js images _headers _redirects public/"
-
 [assets]
-directory = "public"
+directory = "."
 not_found_handling = "single-page-application"

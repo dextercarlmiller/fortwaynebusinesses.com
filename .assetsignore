@@ -1,0 +1,13 @@
+node_modules/
+.wrangler/
+.git/
+.gitignore
+.assetsignore
+package.json
+package-lock.json
+bun.lockb
+bun.lock
+wrangler.toml
+README.md
+Initial
+public/
