@@ -6,6 +6,7 @@
     "wrangler": "^3.0.0"
   },
   "scripts": {
-    "deploy": "wrangler deploy"
+    "build": "mkdir -p public && cp -r index.html about.html contact.html faq.html css js images _headers _redirects public/",
+    "deploy": "npm run build && wrangler deploy"
   }
 }
