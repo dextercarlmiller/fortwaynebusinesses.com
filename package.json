@@ -6,6 +6,7 @@
     "wrangler": "^3.0.0"
   },
   "scripts": {
+    "postinstall": "mkdir -p public && cp -r index.html about.html contact.html faq.html css js images _headers _redirects public/",
     "build": "mkdir -p public && cp -r index.html about.html contact.html faq.html css js images _headers _redirects public/",
     "deploy": "npm run build && wrangler deploy"
   }
