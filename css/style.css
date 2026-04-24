@@ -308,62 +308,6 @@ strong {
 .reveal-delay-3 { transition-delay: 300ms; }
 .reveal-delay-4 { transition-delay: 400ms; }
 
-/* ── Custom Cursor ── */
-@media (pointer: fine) {
-  body {
-    cursor: none;
-  }
-
-  a, button, [role="button"], label, select, input[type="submit"] {
-    cursor: none;
-  }
-}
-
-#cursor-dot,
-#cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9999;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity var(--transition-fast);
-  display: none;
-}
-
-@media (pointer: fine) {
-  #cursor-dot,
-  #cursor-ring {
-    display: block;
-  }
-}
-
-#cursor-dot {
-  width: 12px;
-  height: 12px;
-  background-color: var(--color-primary);
-  transition: transform var(--transition-fast), opacity var(--transition-fast);
-}
-
-#cursor-ring {
-  width: 40px;
-  height: 40px;
-  border: 2px solid rgba(232, 101, 26, 0.4);
-  background: transparent;
-  transition: transform var(--transition-base), width var(--transition-fast), height var(--transition-fast), background var(--transition-fast), opacity var(--transition-fast);
-}
-
-body.cursor-hover #cursor-dot {
-  transform: translate(-50%, -50%) scale(0);
-}
-
-body.cursor-hover #cursor-ring {
-  width: 60px;
-  height: 60px;
-  background: rgba(232, 101, 26, 0.08);
-}
-
 /* ── Section divider ── */
 .divider {
   width: 60px;
