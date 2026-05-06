@@ -23,12 +23,14 @@ export default function AddBusinessPage() {
           >
             Browse listings →
           </Link>
-          <Link
-            to="/web-studio"
+          <a
+            href="https://web.fortwaynebusinesses.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-6 py-2.5 bg-amber-400 text-white rounded-full text-sm font-semibold hover:bg-amber-600 transition-colors"
           >
             Get a website →
-          </Link>
+          </a>
         </div>
       </main>
     )
