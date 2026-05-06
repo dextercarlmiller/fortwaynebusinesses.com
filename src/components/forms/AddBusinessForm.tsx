@@ -147,7 +147,7 @@ export default function AddBusinessForm({ categories, onSuccess }: AddBusinessFo
         />
         {!website && (
           <p className="text-xs text-amber-600 mt-1">
-            No website? <a href="/web-studio" className="underline">We can build one for you.</a>
+            No website? <a href="https://web.fortwaynebusinesses.com" target="_blank" rel="noopener noreferrer" className="underline">We can build one for you.</a>
           </p>
         )}
       </div>

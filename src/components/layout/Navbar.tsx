@@ -55,12 +55,14 @@ export default function Navbar() {
             <Link to="/add-business" className="text-sm text-stone-700 hover:text-forest-600 font-sans">
               Add Business
             </Link>
-            <Link
-              to="/web-studio"
+            <a
+              href="https://web.fortwaynebusinesses.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm bg-amber-400 text-white px-3 py-1.5 rounded-full hover:bg-amber-600 transition-colors font-sans"
             >
               Get a Website
-            </Link>
+            </a>
           </div>
 
           <button
@@ -92,7 +94,7 @@ export default function Navbar() {
           </form>
           <Link to="/browse" className="text-sm text-stone-700 py-1" onClick={() => setMenuOpen(false)}>Browse</Link>
           <Link to="/add-business" className="text-sm text-stone-700 py-1" onClick={() => setMenuOpen(false)}>Add Business</Link>
-          <Link to="/web-studio" className="text-sm text-amber-600 py-1 font-semibold" onClick={() => setMenuOpen(false)}>Get a Website</Link>
+          <a href="https://web.fortwaynebusinesses.com" target="_blank" rel="noopener noreferrer" className="text-sm text-amber-600 py-1 font-semibold" onClick={() => setMenuOpen(false)}>Get a Website</a>
         </div>
       )}
     </nav>
