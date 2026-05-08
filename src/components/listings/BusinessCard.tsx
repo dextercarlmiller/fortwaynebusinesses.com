@@ -32,7 +32,12 @@ export default function BusinessCard({ business }: BusinessCardProps) {
                 {business.name}
               </h3>
             </div>
-            <p className="text-xs text-stone-400 mb-1">{business.category}</p>
+            <p className="text-xs text-stone-400 mb-1">
+              {business.category}
+              {business.neighborhood && (
+                <span className="text-stone-300"> · {business.neighborhood}</span>
+              )}
+            </p>
             <div className="flex flex-wrap gap-1.5">
               {business.is_featured && (
                 <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-forest-50 text-forest-600 border border-forest-200">
