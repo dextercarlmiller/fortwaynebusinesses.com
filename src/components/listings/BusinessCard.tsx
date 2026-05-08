@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 import type { Business } from '../../lib/types'
 import NoWebsiteBadge from '../business/NoWebsiteBadge'
-import { truncate } from '../../lib/utils'
+import { PhoneIcon, StarIcon } from '../Icons'
+import { truncate, formatPhone } from '../../lib/utils'
 
 interface BusinessCardProps {
   business: Business
@@ -40,8 +41,9 @@ export default function BusinessCard({ business }: BusinessCardProps) {
             </p>
             <div className="flex flex-wrap gap-1.5">
               {business.is_featured && (
-                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-forest-50 text-forest-600 border border-forest-200">
-                  ⭐ Featured
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-forest-50 text-forest-600 border border-forest-200">
+                  <StarIcon size={10} />
+                  Featured
                 </span>
               )}
               {!business.website_url && <NoWebsiteBadge />}
@@ -56,7 +58,10 @@ export default function BusinessCard({ business }: BusinessCardProps) {
         )}
 
         {business.phone && (
-          <p className="mt-2 text-xs text-stone-400">📞 {business.phone}</p>
+          <p className="mt-2 text-xs text-stone-400 flex items-center gap-1.5">
+            <PhoneIcon size={11} />
+            {formatPhone(business.phone)}
+          </p>
         )}
       </div>
     </Link>

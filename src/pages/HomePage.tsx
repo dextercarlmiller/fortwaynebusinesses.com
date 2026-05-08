@@ -37,8 +37,6 @@ export default function HomePage() {
 
         <WebStudioCTA />
 
-        {/* TODO: Insert ad provider script here */}
-        <div id="ad-slot-sidebar" />
       </div>
     </main>
   )

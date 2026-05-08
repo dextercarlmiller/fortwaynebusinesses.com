@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { supabase } from '../../lib/supabase'
+import { LaptopIcon, CheckIcon } from '../Icons'
 
 interface WebStudioUpsellCardProps {
   businessId: string
@@ -37,16 +38,25 @@ export default function WebStudioUpsellCard({ businessId, businessName }: WebStu
     }
   }
 
+  const features = [
+    'Affordable one-time fee — no monthly contracts',
+    'Built specifically for Fort Wayne small businesses',
+    'Professional, mobile-friendly design',
+  ]
+
   return (
     <div id="web-studio-upsell" className="bg-amber-50 border border-amber-200 rounded-xl p-6">
       <div className="flex items-center gap-2 mb-2">
-        <span className="text-xl">💻</span>
+        <LaptopIcon size={22} className="text-amber-500" />
         <h3 className="font-serif font-bold text-stone-900 text-lg">No website yet? We can fix that.</h3>
       </div>
-      <ul className="text-sm text-stone-600 space-y-1 mb-4">
-        <li>✅ Affordable one-time fee — no monthly contracts</li>
-        <li>✅ Built specifically for Fort Wayne small businesses</li>
-        <li>✅ Professional, mobile-friendly design</li>
+      <ul className="text-sm text-stone-600 space-y-1.5 mb-4">
+        {features.map(f => (
+          <li key={f} className="flex items-start gap-2">
+            <CheckIcon size={13} className="shrink-0 mt-0.5 text-forest-600" />
+            {f}
+          </li>
+        ))}
       </ul>
 
       {submitted ? (

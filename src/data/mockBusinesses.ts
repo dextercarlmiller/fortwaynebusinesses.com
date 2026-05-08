@@ -100,7 +100,7 @@ export const MOCK_BUSINESSES: Business[] = [
     address: '3210 Coliseum Blvd W',
     zip: '46808',
     phone: '2605554567',
-    website_url: 'https://hoosiераuto.example.com',
+    website_url: 'https://hoosierauto.example.com',
     description:
       'ASE-certified mechanics providing honest, affordable auto repair for all makes and models. From oil changes to engine rebuilds, we treat every car like it\'s our own. Free estimates on all work.',
     hours: {

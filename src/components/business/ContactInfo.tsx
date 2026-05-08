@@ -1,4 +1,5 @@
-import { getMapsUrl } from '../../lib/utils'
+import { getMapsUrl, formatPhone } from '../../lib/utils'
+import { PhoneIcon, MapPinIcon, GlobeIcon } from '../Icons'
 
 interface ContactInfoProps {
   phone?: string
@@ -12,16 +13,16 @@ export default function ContactInfo({ phone, address, city, state, websiteUrl }:
   return (
     <ul className="space-y-3 text-sm">
       {phone && (
-        <li className="flex items-start gap-2">
-          <span className="shrink-0">📞</span>
+        <li className="flex items-center gap-2">
+          <PhoneIcon size={14} className="shrink-0 text-stone-400" />
           <a href={`tel:${phone}`} className="text-forest-600 hover:underline">
-            {phone}
+            {formatPhone(phone)}
           </a>
         </li>
       )}
       {address && (
         <li className="flex items-start gap-2">
-          <span className="shrink-0">📍</span>
+          <MapPinIcon size={14} className="shrink-0 mt-0.5 text-stone-400" />
           <a
             href={getMapsUrl(address, city, state)}
             target="_blank"
@@ -33,8 +34,8 @@ export default function ContactInfo({ phone, address, city, state, websiteUrl }:
         </li>
       )}
       {websiteUrl && (
-        <li className="flex items-start gap-2">
-          <span className="shrink-0">🌐</span>
+        <li className="flex items-center gap-2">
+          <GlobeIcon size={14} className="shrink-0 text-stone-400" />
           <a
             href={websiteUrl}
             target="_blank"

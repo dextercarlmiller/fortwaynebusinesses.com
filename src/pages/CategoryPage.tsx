@@ -77,9 +77,6 @@ export default function CategoryPage() {
         </div>
       </div>
 
-      {/* TODO: Insert ad provider script here */}
-      <div id="ad-slot-category-top" className="mb-6" />
-
       {/* Filters */}
       <div className="flex flex-col sm:flex-row gap-3 mb-6">
         <div className="flex-1">

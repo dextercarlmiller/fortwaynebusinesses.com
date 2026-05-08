@@ -46,9 +46,24 @@ export function useBusinesses(options: UseBusinessesOptions = {}) {
         const { data, error: err } = await query
         if (err) throw err
         const results = data ?? []
-        setBusinesses(results.length > 0 ? results : MOCK_BUSINESSES)
+
+        // Only fall back to demo data when the DB is unfiltered and empty
+        const hasActiveFilters = !!(
+          options.category ||
+          options.neighborhood ||
+          options.search ||
+          options.featured
+        )
+        if (results.length > 0) {
+          setBusinesses(results)
+        } else if (!hasActiveFilters) {
+          setBusinesses(MOCK_BUSINESSES)
+        } else {
+          setBusinesses([])
+        }
       } catch (e) {
         setError(e instanceof Error ? e.message : 'Failed to load businesses')
+        setBusinesses(MOCK_BUSINESSES)
       } finally {
         setLoading(false)
       }
