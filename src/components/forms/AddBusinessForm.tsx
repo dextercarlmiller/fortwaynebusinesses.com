@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { supabase } from '../../lib/supabase'
 import { generateSlug, generateClaimToken } from '../../lib/utils'
 import type { Category } from '../../lib/types'
+import { NEIGHBORHOODS } from '../listings/NeighborhoodFilter'
 
 const DAYS = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
 const DAY_LABELS: Record<string, string> = {
@@ -16,6 +17,7 @@ interface AddBusinessFormProps {
 export default function AddBusinessForm({ categories, onSuccess }: AddBusinessFormProps) {
   const [name, setName] = useState('')
   const [category, setCategory] = useState('')
+  const [neighborhood, setNeighborhood] = useState('')
   const [description, setDescription] = useState('')
   const [address, setAddress] = useState('')
   const [phone, setPhone] = useState('')
@@ -41,6 +43,7 @@ export default function AddBusinessForm({ categories, onSuccess }: AddBusinessFo
         name,
         slug,
         category,
+        neighborhood: neighborhood || null,
         description,
         address,
         phone,
@@ -88,6 +91,19 @@ export default function AddBusinessForm({ categories, onSuccess }: AddBusinessFo
             <option value="">Select a category…</option>
             {categories.map(c => (
               <option key={c.id} value={c.name}>{c.icon} {c.name}</option>
+            ))}
+          </select>
+        </div>
+        <div className="sm:col-span-2">
+          <label className="block text-sm font-medium text-stone-700 mb-1">Neighborhood / Area</label>
+          <select
+            value={neighborhood}
+            onChange={e => setNeighborhood(e.target.value)}
+            className="w-full px-3 py-2.5 rounded-lg border border-stone-200 text-sm focus:outline-none focus:ring-2 focus:ring-forest-400"
+          >
+            <option value="">Select an area…</option>
+            {NEIGHBORHOODS.map(n => (
+              <option key={n} value={n}>{n}</option>
             ))}
           </select>
         </div>

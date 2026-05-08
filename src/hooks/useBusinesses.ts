@@ -4,6 +4,7 @@ import type { Business } from '../lib/types'
 
 interface UseBusinessesOptions {
   category?: string
+  neighborhood?: string
   featured?: boolean
   limit?: number
   search?: string
@@ -23,6 +24,9 @@ export function useBusinesses(options: UseBusinessesOptions = {}) {
 
         if (options.category) {
           query = query.eq('category', options.category)
+        }
+        if (options.neighborhood) {
+          query = query.eq('neighborhood', options.neighborhood)
         }
         if (options.featured) {
           query = query.eq('is_featured', true)
@@ -49,7 +53,7 @@ export function useBusinesses(options: UseBusinessesOptions = {}) {
     }
 
     fetch()
-  }, [options.category, options.featured, options.limit, options.search])
+  }, [options.category, options.neighborhood, options.featured, options.limit, options.search])
 
   return { businesses, loading, error }
 }

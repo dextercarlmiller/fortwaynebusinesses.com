@@ -4,6 +4,7 @@ export interface Business {
   slug: string
   category: string
   subcategory?: string
+  neighborhood?: string
   description?: string
   address?: string
   city: string
