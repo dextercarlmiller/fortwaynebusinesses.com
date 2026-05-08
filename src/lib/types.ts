@@ -5,6 +5,7 @@ export interface Business {
   category: string
   subcategory?: string
   description?: string
+  neighborhood?: string
   address?: string
   city: string
   state: string

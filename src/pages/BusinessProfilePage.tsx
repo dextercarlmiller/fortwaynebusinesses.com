@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { useBusiness } from '../hooks/useBusinesses'
+import { useDocumentHead } from '../hooks/useDocumentHead'
 import ContactInfo from '../components/business/ContactInfo'
 import HoursDisplay from '../components/business/HoursDisplay'
 import NoWebsiteBadge from '../components/business/NoWebsiteBadge'
@@ -13,6 +14,16 @@ function scrollToUpsell() {
 export default function BusinessProfilePage() {
   const { slug } = useParams<{ slug: string }>()
   const { business, loading, error } = useBusiness(slug ?? '')
+
+  const pageTitle = business
+    ? `${business.name} — ${business.category} in Fort Wayne, IN | FortWayneBusinesses.com`
+    : 'Business | FortWayneBusinesses.com'
+
+  const metaDescription = business
+    ? `${business.name} is a ${business.category} business${business.neighborhood ? ` in ${business.neighborhood}` : ''} in Fort Wayne, IN.${business.description ? ' ' + business.description.slice(0, 120) + '…' : ''}`
+    : undefined
+
+  useDocumentHead(loading ? undefined : pageTitle, loading ? undefined : metaDescription)
 
   if (loading) {
     return (
@@ -38,13 +49,15 @@ export default function BusinessProfilePage() {
   }
 
   const initials = business.name.split(' ').map(w => w[0]).slice(0, 2).join('').toUpperCase()
+  const categorySlug = business.category.toLowerCase().replace(/\s+/g, '-')
+  const locationLabel = [business.neighborhood, business.city, business.state].filter(Boolean).join(', ')
 
   return (
     <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <nav className="text-xs text-stone-400 mb-6 flex items-center gap-1.5">
         <Link to="/" className="hover:text-forest-600">Home</Link>
         <span>›</span>
-        <Link to={`/category/${business.category.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-forest-600">
+        <Link to={`/category/${categorySlug}`} className="hover:text-forest-600">
           {business.category}
         </Link>
         <span>›</span>
@@ -67,6 +80,12 @@ export default function BusinessProfilePage() {
               <h1 className="font-serif text-3xl font-bold text-stone-900 leading-tight">{business.name}</h1>
               <div className="flex flex-wrap items-center gap-2 mt-1">
                 <span className="text-sm text-stone-500">{business.category}</span>
+                {business.neighborhood && (
+                  <span className="text-sm text-stone-400">·</span>
+                )}
+                {business.neighborhood && (
+                  <span className="text-sm text-stone-500">{locationLabel}</span>
+                )}
                 {business.is_featured && (
                   <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-forest-50 text-forest-600 border border-forest-200">
                     ⭐ Featured
@@ -136,6 +155,12 @@ export default function BusinessProfilePage() {
               state={business.state}
               websiteUrl={business.website_url}
             />
+            {business.neighborhood && (
+              <p className="mt-3 text-xs text-stone-400 flex items-center gap-1">
+                <span>🏘️</span>
+                <span>{business.neighborhood} neighborhood</span>
+              </p>
+            )}
             {!business.website_url && (
               <button
                 onClick={scrollToUpsell}

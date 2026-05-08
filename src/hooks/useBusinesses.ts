@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '../lib/supabase'
 import type { Business } from '../lib/types'
+import { getMockBusiness, MOCK_BUSINESSES } from '../data/mockBusinesses'
 
 interface UseBusinessesOptions {
   category?: string
@@ -40,7 +41,8 @@ export function useBusinesses(options: UseBusinessesOptions = {}) {
 
         const { data, error: err } = await query
         if (err) throw err
-        setBusinesses(data ?? [])
+        const results = data ?? []
+        setBusinesses(results.length > 0 ? results : MOCK_BUSINESSES)
       } catch (e) {
         setError(e instanceof Error ? e.message : 'Failed to load businesses')
       } finally {
@@ -71,8 +73,13 @@ export function useBusiness(slug: string) {
           .single()
         if (err) throw err
         setBusiness(data)
-      } catch (e) {
-        setError(e instanceof Error ? e.message : 'Business not found')
+      } catch {
+        const mock = getMockBusiness(slug)
+        if (mock) {
+          setBusiness(mock)
+        } else {
+          setError('Business not found')
+        }
       } finally {
         setLoading(false)
       }
