@@ -30,6 +30,7 @@ export interface Category {
   name: string
   slug: string
   icon: string
+  description?: string
   display_order: number
   listing_count: number
 }

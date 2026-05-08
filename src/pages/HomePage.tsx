@@ -17,9 +17,17 @@ export default function HomePage() {
         totalCategories={categories.length}
       />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-14">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+        {/* Primary navigation: category grid */}
         <section>
-          <h2 className="font-serif text-2xl font-bold text-stone-900 mb-5">Browse by Category</h2>
+          <div className="mb-6">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-stone-900">
+              What are you looking for?
+            </h2>
+            <p className="text-stone-500 mt-1 text-sm sm:text-base">
+              Browse Fort Wayne businesses by category
+            </p>
+          </div>
           <CategoryGrid categories={categories} loading={catLoading} />
         </section>
 
