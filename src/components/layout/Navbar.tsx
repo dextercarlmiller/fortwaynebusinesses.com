@@ -1,5 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+import { SearchIcon, MenuIcon, CloseIcon } from '../Icons'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -11,6 +12,7 @@ export default function Navbar() {
     if (searchQuery.trim()) {
       navigate(`/browse?q=${encodeURIComponent(searchQuery.trim())}`)
       setSearchQuery('')
+      setMenuOpen(false)
     }
   }
 
@@ -19,7 +21,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-2xl">🌳</span>
+            <span className="text-2xl" role="img" aria-label="Tree">🌳</span>
             <div>
               <span className="font-serif font-bold text-forest-600 text-lg leading-tight block">
                 FortWayne
@@ -41,9 +43,10 @@ export default function Navbar() {
               />
               <button
                 type="submit"
+                aria-label="Search"
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 hover:text-forest-600"
               >
-                🔍
+                <SearchIcon size={15} />
               </button>
             </div>
           </form>
@@ -68,9 +71,9 @@ export default function Navbar() {
           <button
             className="md:hidden p-2 text-stone-600"
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           >
-            {menuOpen ? '✕' : '☰'}
+            {menuOpen ? <CloseIcon size={20} /> : <MenuIcon size={20} />}
           </button>
         </div>
       </div>

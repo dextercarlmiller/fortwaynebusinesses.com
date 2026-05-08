@@ -6,6 +6,7 @@ import HoursDisplay from '../components/business/HoursDisplay'
 import NoWebsiteBadge from '../components/business/NoWebsiteBadge'
 import ClaimButton from '../components/business/ClaimButton'
 import WebStudioUpsellCard from '../components/business/WebStudioUpsellCard'
+import { StarIcon, CheckIcon, HomeIcon } from '../components/Icons'
 
 function scrollToUpsell() {
   document.getElementById('web-studio-upsell')?.scrollIntoView({ behavior: 'smooth' })
@@ -40,7 +41,7 @@ export default function BusinessProfilePage() {
   if (error || !business) {
     return (
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-        <p className="text-4xl mb-3">🏙️</p>
+        <p className="text-stone-300 text-6xl mb-4 font-serif font-bold">404</p>
         <h1 className="font-serif text-2xl font-bold text-stone-900 mb-2">Business not found</h1>
         <p className="text-stone-500 mb-4 text-sm">{error}</p>
         <Link to="/browse" className="text-forest-600 hover:underline text-sm">Browse all businesses →</Link>
@@ -87,13 +88,15 @@ export default function BusinessProfilePage() {
                   <span className="text-sm text-stone-500">{locationLabel}</span>
                 )}
                 {business.is_featured && (
-                  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-forest-50 text-forest-600 border border-forest-200">
-                    ⭐ Featured
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-forest-50 text-forest-600 border border-forest-200">
+                    <StarIcon size={10} />
+                    Featured
                   </span>
                 )}
                 {business.is_verified && (
-                  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-600 border border-blue-200">
-                    ✓ Verified
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-600 border border-blue-200">
+                    <CheckIcon size={10} className="text-blue-600" />
+                    Verified
                   </span>
                 )}
                 {!business.website_url && (
@@ -156,8 +159,8 @@ export default function BusinessProfilePage() {
               websiteUrl={business.website_url}
             />
             {business.neighborhood && (
-              <p className="mt-3 text-xs text-stone-400 flex items-center gap-1">
-                <span>🏘️</span>
+              <p className="mt-3 text-xs text-stone-400 flex items-center gap-1.5">
+                <HomeIcon size={13} className="shrink-0" />
                 <span>{business.neighborhood} neighborhood</span>
               </p>
             )}
@@ -177,9 +180,6 @@ export default function BusinessProfilePage() {
               <HoursDisplay hours={business.hours} />
             </div>
           )}
-
-          {/* TODO: Insert ad provider script here */}
-          <div id="ad-slot-sidebar" />
         </aside>
       </div>
     </main>

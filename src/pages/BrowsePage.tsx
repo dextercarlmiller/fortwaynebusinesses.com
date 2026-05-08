@@ -113,9 +113,6 @@ export default function BrowsePage() {
         )}
       </div>
 
-      {/* TODO: Insert ad provider script here */}
-      <div id="ad-slot-category-top" className="mb-6" />
-
       <BusinessGrid
         businesses={paginated}
         loading={loading}
